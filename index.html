@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choyon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* Liquid Background Blobs */
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .blob {
+            position: absolute;
+            background: linear-gradient(135deg, #3b82f6 0%, #9333ea 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(0, 0); }
+            to { transform: translate(100px, 100px); }
+        }
+
+        /* Glass Card Design */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* Interactive Bio Links */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <div class="blob" style="width: 300px; height: 300px; top: 10%; left: 20%;"></div>
+        <div class="blob" style="width: 400px; height: 400px; bottom: 10%; right: 10%; background: navajowhite;"></div>
+    </div>
+
+    <div class="glass-card">
+        <img src="/public/92eb171e-7916-4180-b4bb-d428b45cc1af_exported_41.jpg" alt="Profile" class="profile-img">
+        <h1>Your Name</h1>
+        <p>Digital Creator | Tech Enthusiast</p>
+
+        <div class="links">
+            <a href="#" class="link-item">Portfolio</a>
+            <a href="https://www.instagram.com/abdul_hadi_choyon?igsh=ZmduOWwweGEzcTA2" class="link-item">Instagram</a>
+            <a href="#" class="link-item">LinkedIn</a>
+            <a href="#" class="link-item">Twitter / X</a>
+        </div>
+        <div class="nav-container">
+</div>
+
+    </div>
+
+</body>
+</html>
